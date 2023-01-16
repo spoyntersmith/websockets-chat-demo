@@ -25,5 +25,6 @@ Route::post('/message', function () {
         message: $message
     );
     event($event);
+
     return response()->json(['message' => 'Message sent']);
 })->name('send.message');
